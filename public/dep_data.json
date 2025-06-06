@@ -1,0 +1,93 @@
+{
+  "university": {
+    "name": "University of Sétif",
+    "location": "Sétif, Algeria",
+    "departments": [
+      {
+        "name": "Chemistry",
+        "abbreviation": "chem",
+        "head": "Dr. Ahmed Benmouhoub",
+        "building": "Science Building A",
+        "courses": [
+          "Organic Chemistry",
+          "Inorganic Chemistry",
+          "Physical Chemistry",
+          "Analytical Chemistry"
+        ],
+        "established": 1978,
+        "description": "The Chemistry Department at University of Sétif has been at the forefront of chemical research and education since 1978. We offer comprehensive programs that cover all major branches of chemistry, with state-of-the-art laboratories and research facilities.",
+        "tagline": "Advancing chemical sciences through innovation and research",
+        "facultyCount": 28,
+        "email": "chemistry@univ-setif.dz",
+        "phone": "+213 36 12 34 56",
+        "website": "https://eco.univ-setif.dz/"
+      },
+      {
+        "name": "Computer Science",
+        "abbreviation": "cs",
+        "head": "Dr. Fatima Zohra Kebir",
+        "building": "Technology Building B",
+        "courses": [
+          "Programming Fundamentals",
+          "Data Structures",
+          "Algorithms",
+          "Artificial Intelligence",
+          "Database Systems",
+          "Computer Networks",
+          "Software Engineering"
+        ],
+        "established": 1995,
+        "description": "The Computer Science Department prepares students for the digital age with cutting-edge programs in software development, artificial intelligence, and data science. Our graduates are highly sought after in the tech industry.",
+        "tagline": "Shaping the future through computing innovation",
+        "facultyCount": 35,
+        "email": "cs@univ-setif.dz",
+        "phone": "+213 36 12 34 57",
+        "website": "https://fsciences.univ-setif.dz/"
+      },
+      {
+        "name": "Mathematics",
+        "abbreviation": "math",
+        "head": "Dr. Mohamed Taha",
+        "building": "Science Building A",
+        "courses": [
+          "Calculus",
+          "Linear Algebra",
+          "Differential Equations",
+          "Number Theory",
+          "Statistics",
+          "Numerical Analysis",
+          "Topology"
+        ],
+        "established": 1978,
+        "description": "The Mathematics Department offers rigorous programs that develop strong analytical and problem-solving skills. Our faculty are engaged in research across pure and applied mathematics.",
+        "tagline": "Exploring the language of the universe",
+        "facultyCount": 25,
+        "email": "mathematics@univ-setif.dz",
+        "phone": "+213 36 12 34 58",
+        "website": "https://fmedecine.univ-setif.dz/"
+      },
+      {
+        "name": "Physics",
+        "abbreviation": "phys",
+        "head": "Dr. Leila Boukhatem",
+        "building": "Science Building B",
+        "courses": [
+          "Classical Mechanics",
+          "Quantum Physics",
+          "Electromagnetism",
+          "Thermodynamics",
+          "Nuclear Physics",
+          "Astrophysics",
+          "Solid State Physics"
+        ],
+        "established": 1978,
+        "description": "The Physics Department is dedicated to understanding the fundamental laws of nature through theoretical and experimental research. We offer programs that prepare students for careers in research, education, and industry.",
+        "tagline": "Unraveling the mysteries of the physical world",
+        "facultyCount": 22,
+        "email": "physics@univ-setif.dz",
+        "phone": "+213 36 12 34 59",
+        "website": "https://fmedecine.univ-setif.dz/"
+      }
+    ]
+  }
+}
