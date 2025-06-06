@@ -37,10 +37,24 @@ Create .env.local from example
 
 Run dev server:npm run dev
 
+env file example : 
+
+GITHUB_ID=your_github_client_id
+GITHUB_SECRET=your_github_client_secret
+NEXTAUTH_SECRET="??????"
+NEXTAUTH_URL= " / "
+
+
+DB_HOST= ????
+DB_USER= ?????
+DB_PASSWORD=?????
+DB_NAME=????????
+
+
  Access
 Role	Default Credentials	Accessible Routes
-Student	email: gmail@gmail.com : gmail@gmail.com	/dashboard, /courses, etc.
-Admin	email: gmail@gmail.com : gmail@gmail.com	/admin, management panels
+Student	email: gmail@gmail.comff : gmail@gmail.com	/dashboard, /courses, etc.-----------------
+Admin	email: gmail@gmail.com : gmail@gmail.com	/admin, management panels ---------------------
 
 ## 📂 Next.js File Structure
 
