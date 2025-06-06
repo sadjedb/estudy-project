@@ -1,36 +1,195 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# eStudy - Student Portal
+ 
+*A Next.js-based student portal with dashboard, course management, and admin panel*
 
-## Getting Started
+## 🚀 Features
+- **Student Dashboard** - View courses, grades, and announcements
+- **Course Management** - Browse modules by department
+- **Project System** - Submit and track assignments
+- **Admin Panel** - Manage students, courses, and content
+- **Responsive UI** - Mobile-friendly design
+- **Secure Auth** - Role-based access control
 
-First, run the development server:
+## 🛠 Tech Stack
+| Category       | Technologies                          |
+|----------------|---------------------------------------|
+| Frontend       | Next.js 14, React 18, Tailwind CSS   |
+| Backend        | Next.js API Routes                   |
+| Database       | MySQL                                |
+| UI Components  | Custom shadcn/ui-inspired components |
+| State Mgmt     | React Hooks                          |
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📦 Installation
+1. Clone repo:
+   ```bash
+   git clone https://github.com/yourusername/estudy.git
+   cd estudy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies: npm install
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Set up database:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Import public/student_portal_project.sql to MySQL
 
-## Learn More
+Configure lib/server/utils/database.js
 
-To learn more about Next.js, take a look at the following resources:
+Create .env.local from example
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run dev server:npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ Access
+Role	Default Credentials	Accessible Routes
+Student	email: gmail@gmail.com : gmail@gmail.com	/dashboard, /courses, etc.
+Admin	email: gmail@gmail.com : gmail@gmail.com	/admin, management panels
 
-## Deploy on Vercel
+## 📂 Next.js File Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+.
+├── app/
+│   ├── (main)/               # Student routes group
+│   │   ├── announcments/
+│   │   │   └── page.jsx
+│   │   ├── contact/
+│   │   │   └── page.jsx
+│   │   ├── dashboard/
+│   │   │   ├── page.jsx
+│   │   │   ├── courses/
+│   │   │   │   ├── page.jsx
+│   │   │   │   └── [module]/
+│   │   │   │       └── page.jsx
+│   │   │   └── grades/
+│   │   │       └── page.jsx
+│   │   ├── departments/
+│   │   │   ├── page.jsx
+│   │   │   └── [department]/
+│   │   │       └── page.jsx
+│   │   ├── privacy/
+│   │   │   └── page.jsx
+│   │   ├── profile/
+│   │   │   └── page.jsx
+│   │   └── projects/
+│   │       └── page.jsx
+│   ├── admin/
+│   │   └── dashboard/
+│   │       └── page.jsx
+│   ├── api/
+│   │   ├── announcements/
+│   │   │   └── route.js
+│   │   ├── marks/
+│   │   │   └── route.js
+│   │   ├── modules/
+│   │   │   └── route.js
+│   │   ├── projects/
+│   │   │   └── route.js
+│   │   ├── students/
+│   │   │   └── route.js
+│   │   ├── submit/
+│   │   │   └── route.js
+│   │   └── whishlist/
+│   │       └── route.js
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.jsx
+│   ├── page.jsx
+│   ├── login/
+│   │   └── page.jsx
+│   └── unauthorized/
+│       └── page.jsx
+├── assets/
+│   ├── slider1.jpg
+│   ├── slider2.jpg
+│   └── slider3.jpg
+├── components/
+│   ├── Footer.jsx
+│   ├── Header.jsx
+│   ├── Providers.jsx
+│   ├── admin/
+│   │   ├── AdminDashboard.jsx
+│   │   ├── Announcements/
+│   │   │   ├── AnnouncementForm.jsx
+│   │   │   ├── AnnouncementItem.jsx
+│   │   │   └── AnnouncementList.jsx
+│   │   ├── Courses/
+│   │   │   └── ModuleManagement.jsx
+│   │   ├── Projects/
+│   │   │   ├── ProjectForm.jsx
+│   │   │   ├── ProjectList.jsx
+│   │   │   └── ProjectTableRow.jsx
+│   │   ├── Shared/
+│   │   │   ├── SearchBar.jsx
+│   │   │   └── TabNavigation.jsx
+│   │   └── Students/
+│   │       ├── StudentForm.jsx
+│   │       ├── StudentList.jsx
+│   │       └── StudentTableRow.jsx
+│   ├── home/
+│   │   ├── ContactSection.jsx
+│   │   ├── DepartmentsSection.jsx
+│   │   ├── Slider.jsx
+│   │   └── UrgentAnnouncement.jsx
+│   └── ui/
+│       ├── alert-dialog.jsx
+│       ├── alert.jsx
+│       ├── avatar.jsx
+│       ├── badge.jsx
+│       ├── button.jsx
+│       ├── card.jsx
+│       ├── checkbox.jsx
+│       ├── dialog.jsx
+│       ├── input.jsx
+│       ├── label.jsx
+│       ├── progress.jsx
+│       ├── scroll-area.jsx
+│       ├── select.jsx
+│       ├── separator.jsx
+│       ├── skeleton.jsx
+│       ├── sonner.jsx
+│       ├── table.jsx
+│       ├── tabs.jsx
+│       ├── textarea.jsx
+│       └── tooltip.jsx
+├── hooks/
+│   ├── useAnnouncements.js
+│   ├── useApi.js
+│   ├── useMarks.js
+│   ├── useModule.js
+│   ├── useProject.js
+│   ├── useStudent.js
+│   ├── useSubmitProject.js
+│   └── useWhishlist.js
+├── lib/
+│   ├── utils.js
+│   ├── server/
+│   │   ├── services/
+│   │   │   ├── AnnouncmentService.js
+│   │   │   ├── authUser.js
+│   │   │   ├── marksService.js
+│   │   │   ├── moduleService.js
+│   │   │   ├── projectService.js
+│   │   │   ├── studentProjectService.js
+│   │   │   ├── studentService.js
+│   │   │   └── whishlistService.js
+│   │   └── utils/
+│   │       └── database.js
+│   └── utils/
+│       └── withAuth.js
+├── public/
+│   ├── dep_data.json
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── student_portal_project.sql
+│   ├── vercel.svg
+│   └── window.svg
+├── .env
+├── .env.local
+├── .gitignore
+├── components.json
+├── eslint.config.mjs
+├── jsconfig.json
+├── next.config.mjs
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+└── README.md
