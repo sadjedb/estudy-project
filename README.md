@@ -53,7 +53,7 @@ DB_NAME=????????
 
  Access
 Role	Default Credentials	Accessible Routes
-Student	email: gmail@gmail.comff : gmail@gmail.com	/dashboard, /courses, etc.-----------------
+Student	email: "gmail@gmail.comff" : gmail@gmail.com	/dashboard, /courses, etc.-----------------
 Admin	email: gmail@gmail.com : gmail@gmail.com	/admin, management panels ---------------------
 
 ## 📂 Next.js File Structure
