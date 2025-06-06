@@ -37,18 +37,20 @@ Create .env.local from example
 
 Run dev server:npm run dev
 
-env file example : 
-
+# GitHub OAuth credentials for NextAuth.js
 GITHUB_ID=your_github_client_id
 GITHUB_SECRET=your_github_client_secret
-NEXTAUTH_SECRET="??????"
-NEXTAUTH_URL= " / "
 
+# NextAuth.js secret and site URL
+NEXTAUTH_SECRET=your_random_secret_key
+NEXTAUTH_URL=http://localhost:3000   # or your deployed URL (e.g., https://example.com)
 
-DB_HOST= ????
-DB_USER= ?????
-DB_PASSWORD=?????
-DB_NAME=????????
+# Database credentials (MySQL/PostgreSQL, etc.)
+DB_HOST=your_database_host           # e.g., localhost or db.example.com
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_NAME=your_database_name
+
 
 
  Access
